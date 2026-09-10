@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Inicia sesión en ArquiHub.">
+	<title>ArquiHub | Iniciar sesión</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+	<main class="app-shell" aria-labelledby="login-title">
+		<a class="back-button" href="index.html" aria-label="Volver a ArquiHub">
+			<span aria-hidden="true">&lt;</span>
+		</a>
+
+		<section class="login-card">
+			<div class="login-content">
+				<img class="brand-logo" src="assets/logo.png" alt="Logo ArquiHub">
+
+				<h1 id="login-title" class="screen-title">Iniciar sesion</h1>
+
+				<form class="login-form" novalidate>
+					<div class="field-group">
+						<label for="username">USERNAME/MAIL</label>
+						<input id="username" name="username" type="text" placeholder="Username o email" autocomplete="username" required>
+					</div>
+
+					<div class="field-group">
+						<label for="password">PASSWORD</label>
+						<input id="password" name="password" type="password" placeholder="Contraseña" autocomplete="current-password" required>
+					</div>
+
+					<p class="form-message" role="alert" aria-live="polite"></p>
+					<button class="continue-button" type="submit">continuar</button>
+				</form>
+			</div>
+
+			<p class="signature">from ATSE</p>
+		</section>
+	</main>
+
+	<script src="js/login.js"></script>
+</body>
+</html>

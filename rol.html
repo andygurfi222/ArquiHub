@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Elige cómo avanzar en ArquiHub.">
+	<title>ArquiHub | Elige cómo avanzar</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/rol.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+	<main class="app-shell" aria-labelledby="role-title">
+		<a class="back-button" href="login.html" aria-label="Volver a iniciar sesión">
+			<span aria-hidden="true">&lt;</span>
+		</a>
+
+		<section class="role-card">
+			<img class="brand-logo" src="assets/logo.png" alt="Logo ArquiHub">
+
+			<h1 id="role-title" class="screen-title">ELIGE COMO<br>AVANZAR</h1>
+
+			<nav class="role-options" aria-label="Selecciona tu perfil">
+				<a class="role-option" href="dueno-terreno.html">
+					<span>DUEÑO DE<br>TERRENO</span>
+					<i class="fa-solid fa-house" aria-hidden="true"></i>
+				</a>
+				<a class="role-option" href="arquitecto.html">
+					<span>ARQUITECTO</span>
+					<i class="fa-solid fa-compass-drafting" aria-hidden="true"></i>
+				</a>
+				<a class="role-option" href="inversor.html">
+					<span>INVERSOR</span>
+					<i class="fa-solid fa-coins" aria-hidden="true"></i>
+				</a>
+			</nav>
+
+			<a class="explore-link" href="explorar.html">
+				<span>EXPLORAR SIN CUENTA</span>
+				<span class="explore-arrow" aria-hidden="true">→</span>
+			</a>
+		</section>
+	</main>
+
+	<script src="js/rol.js"></script>
+</body>
+</html>

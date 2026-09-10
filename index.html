@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ArquiHub, plataforma para conectar proyectos de arquitectura e inversion.">
+    <title>ArquiHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell" aria-label="ArquiHub">
+        <section class="screen is-active" data-view="welcome" aria-labelledby="welcome-title">
+            <div class="screen-content welcome-content">
+                <img class="brand-logo" src="assets/logo.png" alt="Logo ArquiHub">
+                <h1 id="welcome-title" class="brand-name">ArquiHub</h1>
+                <div class="primary-actions">
+                    <button class="button button-primary" type="button" data-navigate="login">Iniciar sesión</button>
+                    <button class="button button-primary" type="button" data-navigate="register">Registrate</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="screen" data-view="login" aria-labelledby="login-title" aria-hidden="true">
+            <button class="back-button" type="button" data-back aria-label="Volver"><span aria-hidden="true">&lt;</span></button>
+            <div class="screen-content form-content">
+                <img class="brand-logo" src="assets/logo.png" alt="Logo ArquiHub">
+                <h2 id="login-title" class="screen-title">Iniciar sesion</h2>
+                <form class="login-form" novalidate>
+                    <div class="field-group">
+                        <label for="username">USERNAME/MAIL</label>
+                        <input id="username" name="username" type="text" autocomplete="username" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="password">PASSWORD</label>
+                        <input id="password" name="password" type="password" autocomplete="current-password" required>
+                    </div>
+                    <p class="form-message" role="alert" aria-live="polite"></p>
+                    <button class="button button-primary" type="submit">continuar</button>
+                </form>
+                <p class="signature">from ATSE</p>
+            </div>
+        </section>
+
+        <section class="screen" data-view="register" aria-labelledby="register-title" aria-hidden="true">
+            <button class="back-button" type="button" data-back aria-label="Volver"><span aria-hidden="true">&lt;</span></button>
+            <div class="screen-content register-content">
+                <h2 id="register-title" class="screen-title">ELIGE COMO AVANZAR</h2>
+                <div class="role-options">
+                    <button class="role-option" type="button" data-role="Dueño de terreno">
+                        <span class="role-icon" aria-hidden="true"><i class="fa-solid fa-house"></i></span>
+                        <span>DUEÑO DE TERRENO</span>
+                    </button>
+                    <button class="role-option" type="button" data-role="Arquitecto">
+                        <span class="role-icon" aria-hidden="true"><i class="fa-solid fa-compass-drafting"></i></span>
+                        <span>ARQUITECTO</span>
+                    </button>
+                    <button class="role-option" type="button" data-role="Inversor">
+                        <span class="role-icon" aria-hidden="true"><i class="fa-solid fa-coins"></i></span>
+                        <span>INVERSOR</span>
+                    </button>
+                </div>
+                <button class="explore-button" type="button" data-explore>
+                    <span>EXPLORAR SIN CUENTA</span>
+                    <span class="explore-arrow" aria-hidden="true">→</span>
+                </button>
+                <p class="selection-message" role="status" aria-live="polite"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
