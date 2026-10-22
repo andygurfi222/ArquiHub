@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elegí cómo participar en ArquiHub.">
+    <title>ArquiHub | Elegir publicación</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/elegir-publicacion.css">
+    <link rel="stylesheet" href="../css/desktop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+    <div class="app-frame choose-frame">
+        <header class="choose-header">
+            <button class="menu-toggle choose-menu-toggle" type="button" data-sidebar-toggle aria-controls="arqhub-sidebar" aria-expanded="false" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <a class="choose-brand" href="home.html" aria-label="ArquiHub, inicio">
+                <span class="choose-brand-mark" aria-hidden="true"><i class="fa-solid fa-a"></i></span>
+                <span>ARQUIHUB</span>
+            </a>
+            <a class="profile-dot" href="perfil.html" aria-label="Abrir perfil"><i class="fa-regular fa-user" aria-hidden="true"></i></a>
+        </header>
+
+        <main class="choose-main">
+            <section class="choose-intro" aria-labelledby="choose-title">
+                <span class="section-label">Publicá en ArquiHub</span>
+                <h1 id="choose-title">¿Cómo querés publicar?</h1>
+                <p>Elegí cómo querés participar en ArquiHub.</p>
+            </section>
+
+            <section class="role-options" aria-label="Elegí un tipo de publicación">
+                <article class="role-card">
+                    <div class="role-icon owner-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="role-copy">
+                        <span class="role-number">01 / TERRENO</span>
+                        <h2>Dueño de terreno</h2>
+                        <p class="role-lead">Publicá tu terreno para que arquitectos puedan desarrollar propuestas sobre él.</p>
+                        <p class="role-description">Compartí las medidas, características, condiciones y necesidades de tu terreno para que los arquitectos puedan conocerlo y diseñar propuestas adaptadas.</p>
+                    </div>
+                    <a class="role-cta" href="publicar-terreno.html">Continuar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </article>
+
+                <article class="role-card architect-card">
+                    <div class="role-icon architect-icon" aria-hidden="true"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <div class="role-copy">
+                        <span class="role-number">02 / PROPUESTA</span>
+                        <h2>Arquitecto</h2>
+                        <p class="role-lead">Creá una propuesta arquitectónica basada en un terreno publicado.</p>
+                        <p class="role-description">Elegí un terreno disponible, conocé sus características y condiciones y desarrollá un proyecto adaptado a sus necesidades.</p>
+                    </div>
+                    <a class="role-cta" href="elegir-terreno.html">Continuar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </article>
+            </section>
+        </main>
+
+        <nav class="bottom-nav" aria-label="Navegación principal">
+            <a class="bottom-nav-link" href="home.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a>
+            <a class="bottom-nav-link" href="buscador.html"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span>Explorar</span></a>
+            <a class="bottom-nav-link bottom-nav-publish is-active" href="publicar.html" aria-current="page" aria-label="Publicar"><i class="fa-solid fa-plus" aria-hidden="true"></i></a>
+            <a class="bottom-nav-link" href="notificaciones.html"><i class="fa-regular fa-bell" aria-hidden="true"></i><span>Notificaciones</span></a>
+            <a class="bottom-nav-link" href="perfil.html"><i class="fa-regular fa-user" aria-hidden="true"></i><span>Perfil</span></a>
+        </nav>
+    </div>
+
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/elegir-publicacion.js"></script>
+</body>
+</html>

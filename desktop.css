@@ -1,0 +1,317 @@
+/* Shared desktop composition. Mobile layouts remain the default below 900px. */
+.bottom-nav-link {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+@media (max-width: 899px) {
+    html,
+    body {
+        width: 100%;
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    .app-frame {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .home-main,
+    .search-main,
+    .profile-main,
+    .detail-main,
+    .publish-main,
+    .choose-main,
+    .terrain-publish-main,
+    .project-main {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .home-main,
+    .search-main,
+    .profile-main,
+    .detail-main,
+    .publish-main,
+    .choose-main,
+    .terrain-publish-main,
+    .project-main {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .architect-list {
+        margin-right: -1rem;
+        margin-left: -1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .feature-card,
+    .project-card,
+    .form-section,
+    .selected-land-card,
+    .owner-conditions {
+        max-width: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+    }
+
+    .bottom-nav {
+        width: 100%;
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+
+    .bottom-nav-link {
+        min-width: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        background: #eef1f5;
+    }
+
+    .app-frame {
+        max-width: 1180px !important;
+        min-height: 100vh;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-shadow: none;
+    }
+
+    .home-header,
+    .search-header,
+    .profile-header,
+    .detail-header,
+    .publish-header,
+    .choose-header,
+    .terrain-publish-header,
+    .project-header {
+        min-height: 5.25rem;
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+    }
+
+    .home-main,
+    .search-main,
+    .profile-main,
+    .detail-main,
+    .publish-main,
+    .choose-main,
+    .terrain-publish-main,
+    .project-main {
+        max-width: 1060px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .home-main {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(20rem, .85fr);
+        gap: 2.5rem;
+        align-items: start;
+        padding: 2.75rem 2.5rem 4rem;
+    }
+
+    .home-main .search-section,
+    .home-main .feature-card {
+        grid-column: 1 / -1;
+    }
+
+    .home-main .search-section {
+        margin-bottom: 0;
+    }
+
+    .home-main .feature-card {
+        min-height: 15rem;
+        padding: 2.25rem;
+    }
+
+    .home-main .content-section {
+        min-width: 0;
+        margin-top: 0;
+    }
+
+    .home-main .architect-list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+        margin: 1rem 0 0;
+        padding: 0 0 .5rem;
+        overflow: visible;
+    }
+
+    .home-main .architect-card {
+        min-width: 0;
+    }
+
+    .home-main .project-list {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .home-main .project-card {
+        grid-template-columns: 8.5rem 1fr;
+        min-height: 8.5rem;
+    }
+
+    .home-main .project-image {
+        min-height: 8.5rem;
+    }
+
+    .search-main,
+    .profile-main,
+    .detail-main,
+    .publish-main,
+    .choose-main,
+    .terrain-publish-main,
+    .project-main {
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+    }
+
+    .search-main {
+        padding-top: 2.75rem;
+    }
+
+    .search-controls,
+    .results-section {
+        max-width: 980px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .results-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .profile-main,
+    .detail-main {
+        max-width: 900px;
+        padding-top: 2.75rem;
+    }
+
+    .profile-facts,
+    .feature-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .detail-main article {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .detail-main article > .detail-hero,
+    .detail-main article > .detail-intro,
+    .detail-main article > .contact-button {
+        grid-column: 1 / -1;
+    }
+
+    .detail-section {
+        padding-top: 1.4rem;
+    }
+
+    .opportunity-card {
+        margin-top: 1.4rem;
+    }
+
+    .publish-main,
+    .choose-main {
+        max-width: 960px;
+        padding-top: 4rem;
+    }
+
+    .publish-content {
+        max-width: 48rem;
+    }
+
+    .role-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
+    .terrain-publish-main,
+    .project-main {
+        max-width: 980px;
+        padding-top: 2.25rem;
+    }
+
+    .terrain-publish-main form,
+    .project-main form {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+        align-items: start;
+    }
+
+    .terrain-publish-main .form-intro,
+    .project-main .project-title-band,
+    .project-main .project-intro,
+    .terrain-publish-main .name-section,
+    .terrain-publish-main .media-section,
+    .terrain-publish-main .conditions-section,
+    .project-main .selected-land-card,
+    .project-main .owner-conditions,
+    .project-main .form-section,
+    .project-main .media-section,
+    .terrain-publish-main .form-message,
+    .terrain-publish-main .primary-button,
+    .project-main .form-message,
+    .project-main .primary-button {
+        grid-column: 1 / -1;
+    }
+
+    .project-main .project-title-band,
+    .project-main .project-intro {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .terrain-publish-main .form-section,
+    .project-main .form-section,
+    .project-main .selected-land-card,
+    .project-main .owner-conditions {
+        margin: 0;
+    }
+
+    .terrain-publish-main .section-fields,
+    .project-main .field-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .terrain-publish-main .field.full,
+    .project-main .field.full {
+        grid-column: 1 / -1;
+    }
+
+    .terrain-publish-main .media-grid,
+    .project-main .image-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .bottom-nav {
+        left: 50%;
+        right: auto;
+        width: min(100%, 1180px);
+        min-height: 4.5rem;
+        transform: translateX(-50%);
+        padding: .55rem 2.5rem;
+    }
+
+    .bottom-nav-link {
+        max-width: 9rem;
+    }
+}

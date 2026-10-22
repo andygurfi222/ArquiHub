@@ -8,9 +8,14 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="../css/login.css">
+	<link rel="stylesheet" href="../css/sidebar.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
 </head>
 <body>
+	<button class="menu-toggle" type="button" data-sidebar-toggle aria-controls="arqhub-sidebar" aria-expanded="false" aria-label="Abrir menú">
+		<i class="fa-solid fa-bars" aria-hidden="true"></i>
+	</button>
 	<main class="app-shell" aria-labelledby="login-title">
 		<a class="back-button" href="index.html" aria-label="Volver a ArquiHub">
 			<span aria-hidden="true">&lt;</span>
@@ -42,6 +47,7 @@
 		</section>
 	</main>
 
-	<script src="js/login.js"></script>
+	<script src="../js/sidebar.js"></script>
+	<script src="../js/login.js"></script>
 </body>
 </html>

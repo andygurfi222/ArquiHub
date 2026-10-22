@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creá una propuesta arquitectónica sobre un terreno publicado en ArquiHub.">
+    <title>ArquiHub | Tu Proyecto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/crear-proyecto.css">
+    <link rel="stylesheet" href="../css/desktop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+    <div class="app-frame project-frame">
+        <header class="project-header">
+            <a class="back-link" href="elegir-publicacion.html" aria-label="Volver a elegir publicación"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></a>
+            <a class="project-brand" href="home.html">ARQUIHUB</a>
+            <button class="menu-toggle project-menu-toggle" type="button" data-sidebar-toggle aria-controls="arqhub-sidebar" aria-expanded="false" aria-label="Abrir menú"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+        </header>
+
+        <main class="project-main">
+            <div class="project-title-band"><span>PROPUESTA ARQUITECTÓNICA</span><h1>Tu Proyecto</h1></div>
+            <div class="project-intro"><p>Diseñá una propuesta sobre un terreno publicado y compartila con su propietario.</p></div>
+
+            <section class="selected-land-card" aria-labelledby="selected-land-title">
+                <div class="land-card-top"><span class="eyebrow">TERRENO SELECCIONADO</span><span class="land-status"><i class="fa-solid fa-link" aria-hidden="true"></i> Proyecto asociado</span></div>
+                <div class="land-card-content"><div class="land-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div><div><h2 id="selected-land-title">Terreno Palermo 01</h2><p id="land-location">Buenos Aires</p></div></div>
+                <div class="land-summary" id="land-summary"><span><strong>10 x 30 m</strong>Dimensiones</span><span><strong>300 m²</strong>Superficie</span><span><strong>Orientación</strong>Norte</span></div>
+                <button class="land-details-toggle" type="button" aria-expanded="false" aria-controls="land-details"><span>Ver información completa</span><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                <div class="land-details" id="land-details" hidden></div>
+            </section>
+
+            <section class="owner-conditions" aria-labelledby="conditions-title"><div class="section-heading"><span class="section-icon"><i class="fa-solid fa-list-check" aria-hidden="true"></i></span><div><span class="eyebrow">A TENER EN CUENTA</span><h2 id="conditions-title">Condiciones del propietario</h2></div></div><div class="condition-list" id="condition-list"></div><p class="conditions-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Tu propuesta debe adaptarse a las condiciones del terreno y del propietario.</p></section>
+
+            <form id="project-form" novalidate>
+                <section class="form-section" aria-labelledby="project-info-title"><div class="section-heading"><span class="section-number">01</span><div><span class="eyebrow">LA PROPUESTA</span><h2 id="project-info-title">Información del proyecto</h2></div></div><div class="field-grid"><div class="field full"><label for="nombre">Nombre del proyecto <span>*</span></label><input id="nombre" name="nombre" type="text" placeholder="Casa Patio Palermo" required></div><div class="field"><label for="tipo">Tipo de proyecto <span>*</span></label><select id="tipo" name="tipo" required><option value="">Seleccionar</option><option>Vivienda unifamiliar</option><option>Vivienda multifamiliar</option><option>Comercial</option><option>Uso mixto</option><option>Otro</option></select></div><div class="field"><label for="estilo">Estilo arquitectónico <span>*</span></label><input id="estilo" name="estilo" type="text" placeholder="Contemporáneo" required></div><div class="field"><label for="superficie">Superficie proyectada</label><input id="superficie" name="superficie" type="text" placeholder="180 m²"></div><div class="field"><label for="pisos">Cantidad de pisos</label><input id="pisos" name="pisos" type="number" min="1" placeholder="2"></div><div class="field"><label for="habitaciones">Habitaciones</label><input id="habitaciones" name="habitaciones" type="number" min="0" placeholder="3"></div><div class="field"><label for="presupuesto">Presupuesto estimado</label><input id="presupuesto" name="presupuesto" type="text" placeholder="$XXX"></div><div class="field full"><label for="materiales">Materiales principales</label><input id="materiales" name="materiales" type="text" placeholder="Hormigón, madera, vidrio..."></div><div class="field full"><label for="concepto">Concepto / idea del proyecto</label><textarea id="concepto" name="concepto" rows="4" placeholder="¿Qué idea guía tu propuesta?"></textarea></div><div class="field full"><label for="descripcion">Descripción del proyecto <span>*</span></label><textarea id="descripcion" name="descripcion" rows="7" placeholder="Contale al propietario cómo resolviste el proyecto." required></textarea></div></div></section>
+
+                <section class="form-section media-section" aria-labelledby="images-title"><div class="section-heading"><span class="section-number">02</span><div><span class="eyebrow">REPRESENTACIÓN</span><h2 id="images-title">Imágenes del proyecto</h2></div></div><p class="section-help">Subí renders, fachadas, interiores o plantas para presentar tu idea.</p><div class="image-grid" id="image-grid"></div><button class="secondary-button" type="button" id="add-image"><i class="fa-solid fa-plus" aria-hidden="true"></i> Agregar imagen</button></section>
+
+                <p class="form-message" id="form-message" role="alert" aria-live="polite"></p><button class="primary-button" type="submit"><span>PUBLICAR PROYECTO</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+        </main>
+
+        <nav class="bottom-nav" aria-label="Navegación principal"><a class="bottom-nav-link" href="home.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a><a class="bottom-nav-link" href="buscador.html"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span>Explorar</span></a><a class="bottom-nav-link bottom-nav-publish is-active" href="publicar.html" aria-current="page" aria-label="Publicar"><i class="fa-solid fa-plus" aria-hidden="true"></i></a><a class="bottom-nav-link" href="notificaciones.html"><i class="fa-regular fa-bell" aria-hidden="true"></i><span>Notificaciones</span></a><a class="bottom-nav-link" href="perfil.html"><i class="fa-regular fa-user" aria-hidden="true"></i><span>Perfil</span></a></nav>
+    </div>
+    <script src="../js/sidebar.js"></script><script src="../js/crear-proyecto.js"></script>
+</body>
+</html>

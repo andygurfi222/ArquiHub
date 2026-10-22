@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reseñas y galería de arquitectura de ArquiHub.">
+    <title>ArquiHub | Reseñas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/notificaciones.css">
+    <link rel="stylesheet" href="../css/desktop.css">
+    <link rel="stylesheet" href="../css/resenas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+    <div class="app-frame reviews-frame">
+        <header class="notifications-header">
+            <a class="back-link" href="home.html" aria-label="Volver a Home"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></a>
+            <a class="notifications-brand" href="home.html" aria-label="ArquiHub, inicio">ARQUIHUB</a>
+            <button class="menu-toggle notifications-menu-toggle" type="button" data-sidebar-toggle aria-controls="arqhub-sidebar" aria-expanded="false" aria-label="Abrir menú"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+        </header>
+
+        <main class="reviews-main">
+            <section class="reviews-intro" aria-labelledby="reviews-title">
+                <span class="section-label">Experiencias e inspiración</span>
+                <h1 id="reviews-title">RESEÑAS</h1>
+                <p>Opiniones sobre profesionales y proyectos de la comunidad ArquiHub.</p>
+            </section>
+
+            <div class="reviews-tabs" role="tablist" aria-label="Sección de reseñas">
+                <button class="reviews-tab is-active" id="reviews-tab" type="button" role="tab" aria-selected="true" aria-controls="reviews-panel" data-view="reviews"><i class="fa-regular fa-star" aria-hidden="true"></i> Reseñas</button>
+                <button class="reviews-tab" id="gallery-tab" type="button" role="tab" aria-selected="false" aria-controls="gallery-panel" data-view="gallery" tabindex="-1"><i class="fa-regular fa-images" aria-hidden="true"></i> Galería</button>
+            </div>
+
+            <section class="reviews-panel" id="reviews-panel" role="tabpanel" aria-labelledby="reviews-tab" data-panel="reviews">
+                <div class="review-card" id="review-list" aria-live="polite"></div>
+                <p class="reviews-demo-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> La reseña que se muestra es contenido de demostración; no representa una opinión real ni fue enviada por un usuario.</p>
+            </section>
+
+            <section class="gallery-panel" id="gallery-panel" role="tabpanel" aria-labelledby="gallery-tab" data-panel="gallery" hidden>
+                <div class="gallery-heading"><div><span class="section-label">Inspiración visual</span><h2>Proyectos y espacios</h2></div><p>Fotografías de referencia ya utilizadas en ArquiHub.</p></div>
+                <div class="reviews-gallery" id="reviews-gallery" aria-label="Galería de proyectos arquitectónicos"></div>
+            </section>
+        </main>
+
+        <dialog class="gallery-dialog" id="gallery-dialog" aria-label="Imagen ampliada">
+            <div class="gallery-dialog-card">
+                <button class="gallery-dialog-close" type="button" data-close-dialog aria-label="Cerrar imagen"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+                <img class="gallery-dialog-image" id="gallery-dialog-image" alt="">
+                <div class="gallery-dialog-caption">
+                    <div><h2 id="gallery-dialog-title"></h2><p id="gallery-dialog-meta"></p></div>
+                    <a class="gallery-project-link" id="gallery-project-link" href="#" hidden>Ver proyecto <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </dialog>
+
+        <nav class="bottom-nav" aria-label="Navegación principal">
+            <a class="bottom-nav-link" href="home.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a>
+            <a class="bottom-nav-link" href="buscador.html"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span>Explorar</span></a>
+            <a class="bottom-nav-link bottom-nav-publish" href="publicar.html" aria-label="Publicar"><i class="fa-solid fa-plus" aria-hidden="true"></i></a>
+            <a class="bottom-nav-link" href="notificaciones.html"><i class="fa-regular fa-bell" aria-hidden="true"></i><span>Notificaciones</span></a>
+            <a class="bottom-nav-link" href="perfil.html"><i class="fa-regular fa-user" aria-hidden="true"></i><span>Perfil</span></a>
+        </nav>
+    </div>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/resenas.js"></script>
+</body>
+</html>

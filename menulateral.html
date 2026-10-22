@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ArquiHub | Menú lateral</title>
+	<link rel="stylesheet" href="../css/sidebar.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
+	<style>
+		body {
+			min-height: 100vh;
+			margin: 0;
+			background: #e9e9e7;
+			color: #111111;
+			font-family: "DM Sans", sans-serif;
+		}
+
+		.demo-content {
+			display: grid;
+			min-height: 100vh;
+			place-items: center;
+			padding: 2rem;
+			text-align: center;
+		}
+
+		.demo-content h1 { margin: 0; font-size: clamp(2rem, 8vw, 4.5rem); }
+		.demo-content p { max-width: 32rem; margin: 1rem auto; color: #555555; }
+	</style>
+</head>
+<body>
+	<button class="menu-toggle" type="button" data-sidebar-toggle aria-controls="arqhub-sidebar" aria-expanded="false" aria-label="Abrir menú">
+		<i class="fa-solid fa-bars" aria-hidden="true"></i>
+	</button>
+
+	<main class="demo-content">
+		<div>
+			<h1>ArquiHub</h1>
+			<p>Vista de prueba del menú lateral reutilizable.</p>
+		</div>
+	</main>
+
+	<script src="../js/sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Busca terrenos, arquitectos y proyectos en ArquiHub.">
+    <title>ArquiHub | Buscador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/buscador.css">
+    <link rel="stylesheet" href="../css/desktop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+    <div class="app-frame search-frame">
+        <header class="search-header">
+            <button class="menu-toggle search-menu-toggle" type="button" data-sidebar-toggle aria-controls="arqhub-sidebar" aria-expanded="false" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <a class="search-brand" href="home.html" aria-label="ArquiHub, inicio">
+                <span class="search-brand-mark" aria-hidden="true"><i class="fa-solid fa-a"></i></span>
+                <span>ARQUIHUB</span>
+            </a>
+            <a class="profile-dot" href="perfil.html" aria-label="Abrir perfil"><i class="fa-regular fa-user" aria-hidden="true"></i></a>
+        </header>
+
+        <main class="search-main">
+            <section class="search-intro" aria-labelledby="search-title">
+                <span class="section-label">Explora ArquiHub</span>
+                <h1 id="search-title">Encuentra tu próximo espacio.</h1>
+                <form class="global-search" id="global-search" role="search">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <input id="search-input" type="search" placeholder="Buscar terrenos, arquitectos, proyectos..." autocomplete="off">
+                    <button type="submit" aria-label="Ejecutar búsqueda"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </form>
+            </section>
+
+            <section class="search-controls" aria-label="Filtros de búsqueda">
+                <div class="category-tabs" role="tablist" aria-label="Categoría de búsqueda">
+                    <button class="category-tab is-active" type="button" role="tab" aria-selected="true" data-category="all">Todo</button>
+                    <button class="category-tab" type="button" role="tab" aria-selected="false" data-category="terrain">Terrenos</button>
+                    <button class="category-tab" type="button" role="tab" aria-selected="false" data-category="architect">Arquitectos</button>
+                    <button class="category-tab" type="button" role="tab" aria-selected="false" data-category="project">Proyectos</button>
+                </div>
+                <div class="filter-panel" id="filter-panel"></div>
+                <div class="filter-actions">
+                    <button class="clear-filters" type="button" id="clear-filters">Limpiar filtros</button>
+                    <label class="sort-control" for="sort-select"><span>Ordenar</span><select id="sort-select"><option value="relevance">Más relevantes</option><option value="price-low">Menor precio</option><option value="price-high">Mayor precio</option><option value="surface">Mayor superficie</option><option value="profitability">Mayor rentabilidad</option></select></label>
+                </div>
+            </section>
+
+            <section class="results-section" aria-labelledby="results-title">
+                <div class="results-heading">
+                    <div><span class="section-label">Resultados de búsqueda</span><h2 id="results-title">Resultados</h2></div>
+                    <strong id="results-count">0 resultados</strong>
+                </div>
+                <div class="results-list" id="results-list"></div>
+            </section>
+        </main>
+
+        <nav class="bottom-nav" aria-label="Navegación principal">
+            <a class="bottom-nav-link" href="home.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a>
+            <a class="bottom-nav-link is-active" href="buscador.html" aria-current="page"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span>Explorar</span></a>
+            <a class="bottom-nav-link bottom-nav-publish" href="publicar.html" aria-label="Publicar"><i class="fa-solid fa-plus" aria-hidden="true"></i></a>
+            <a class="bottom-nav-link" href="notificaciones.html"><i class="fa-regular fa-bell" aria-hidden="true"></i><span>Notificaciones</span></a>
+            <a class="bottom-nav-link" href="perfil.html"><i class="fa-regular fa-user" aria-hidden="true"></i><span>Perfil</span></a>
+        </nav>
+    </div>
+
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/buscador.js"></script>
+</body>
+</html>

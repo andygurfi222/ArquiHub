@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Publicá terrenos y propuestas arquitectónicas en ArquiHub.">
+    <title>ArquiHub | Publicá</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/publicar.css">
+    <link rel="stylesheet" href="../css/desktop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+    <div class="app-frame publish-frame">
+        <header class="publish-header">
+            <button class="menu-toggle publish-menu-toggle" type="button" data-sidebar-toggle aria-controls="arqhub-sidebar" aria-expanded="false" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <a class="publish-brand" href="home.html" aria-label="ArquiHub, inicio">
+                <span class="publish-brand-mark" aria-hidden="true"><i class="fa-solid fa-a"></i></span>
+                <span>ARQUIHUB</span>
+            </a>
+            <a class="profile-dot" href="perfil.html" aria-label="Abrir perfil"><i class="fa-regular fa-user" aria-hidden="true"></i></a>
+        </header>
+
+        <main class="publish-main">
+            <section class="publish-content" aria-labelledby="publish-title">
+                <div class="publish-symbol" aria-hidden="true"><i class="fa-solid fa-plus"></i></div>
+                <span class="section-label">Comparte en ArquiHub</span>
+                <h1 id="publish-title">Publicá</h1>
+                <p class="publish-lead">Compartí tu terreno o creá una propuesta arquitectónica.</p>
+                <p class="publish-description">En ArquiHub podés publicar un terreno con sus características y condiciones, o crear un proyecto arquitectónico basado en un terreno publicado.</p>
+                <a class="publish-cta" href="elegir-publicacion.html">Publicá <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </section>
+        </main>
+
+        <nav class="bottom-nav" aria-label="Navegación principal">
+            <a class="bottom-nav-link" href="home.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a>
+            <a class="bottom-nav-link" href="buscador.html"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span>Explorar</span></a>
+            <a class="bottom-nav-link bottom-nav-publish is-active" href="publicar.html" aria-current="page" aria-label="Publicar"><i class="fa-solid fa-plus" aria-hidden="true"></i></a>
+            <a class="bottom-nav-link" href="notificaciones.html"><i class="fa-regular fa-bell" aria-hidden="true"></i><span>Notificaciones</span></a>
+            <a class="bottom-nav-link" href="perfil.html"><i class="fa-regular fa-user" aria-hidden="true"></i><span>Perfil</span></a>
+        </nav>
+    </div>
+
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/publicar.js"></script>
+</body>
+</html>

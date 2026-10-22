@@ -1,0 +1,49 @@
+* { box-sizing: border-box; }
+:root { --explore-ink: #172234; --explore-muted: #778296; --explore-line: #e1e6ee; --explore-blue: #1e5bb8; --explore-blue-dark: #123e84; --explore-soft: #f3f6fb; }
+html { background: #eef1f5; }
+body { margin: 0; background: #eef1f5; color: var(--explore-ink); font-family: "DM Sans", sans-serif; }
+button { font: inherit; cursor: pointer; }
+a { color: inherit; }
+.app-frame { width: 100%; max-width: 34rem; min-height: 100vh; margin: 0 auto; padding-bottom: 5.75rem; background: #fff; }
+.explore-projects-header { position: sticky; top: 0; z-index: 900; display: grid; grid-template-columns: 2.75rem 1fr 2.75rem; align-items: center; min-height: 4.45rem; padding: .75rem 1.15rem; border-bottom: 1px solid var(--explore-line); background: rgba(255,255,255,.96); backdrop-filter: blur(12px); }
+.header-spacer, .explore-menu-toggle { display: grid; width: 2.45rem; height: 2.45rem; place-items: center; border: 0; border-radius: 50%; background: transparent; color: var(--explore-ink); text-decoration: none; }
+.explore-menu-toggle:hover, .explore-menu-toggle:focus-visible { background: var(--explore-soft); color: var(--explore-blue); outline: none; }
+.explore-menu-toggle { position: static; justify-self: end; }
+.explore-brand { font-family: "Space Grotesk", sans-serif; font-size: .9rem; font-weight: 700; letter-spacing: .14em; text-align: center; text-decoration: none; }
+.explore-projects-main { padding: 1.8rem 1rem 2.5rem; }
+.explore-intro { padding: 0 .25rem; }
+.section-label { color: var(--explore-muted); font-size: .67rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.explore-intro h1 { margin: .35rem 0 0; font-family: "Space Grotesk", sans-serif; font-size: clamp(1.8rem, 8vw, 2.5rem); line-height: 1.05; }
+.explore-intro p { max-width: 31rem; margin: .7rem 0 0; color: var(--explore-muted); font-size: .84rem; line-height: 1.55; }
+.project-search { display: flex; align-items: center; gap: .7rem; min-height: 3.45rem; margin-top: 1rem; padding: .35rem .45rem .35rem 1rem; border: 1px solid var(--explore-line); border-radius: .8rem; background: #fafafa; transition: border-color 180ms ease, box-shadow 180ms ease; }
+.project-search:focus-within { border-color: var(--explore-blue); box-shadow: 0 0 0 3px rgba(30,91,184,.12); }
+.project-search > i { color: var(--explore-muted); }
+.project-search input { min-width: 0; flex: 1; border: 0; outline: 0; background: transparent; color: var(--explore-ink); font-size: .84rem; }
+.project-search input::placeholder { color: #a4aab4; }
+.project-search button { display: grid; width: 2.55rem; height: 2.55rem; place-items: center; border: 0; border-radius: .6rem; background: var(--explore-ink); color: #fff; }
+.project-search button:hover, .project-search button:focus-visible { background: var(--explore-blue); outline: none; }
+.projects-grid { display: grid; gap: 1rem; margin-top: 1.7rem; }
+.project-card { overflow: hidden; border: 1px solid var(--explore-line); border-radius: .8rem; background: #fff; box-shadow: 0 .35rem 1.15rem rgba(23,34,52,.04); }
+.project-image-wrap { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #d7dce4; }
+.project-image { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 260ms ease; }
+.project-card:hover .project-image { transform: scale(1.035); }
+.project-type { position: absolute; top: .75rem; left: .75rem; padding: .3rem .5rem; border-radius: .3rem; background: rgba(23,34,52,.82); color: #fff; font-size: .62rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.project-card-body { padding: 1rem; }
+.project-card-body h2 { margin: 0; font-family: "Space Grotesk", sans-serif; font-size: 1.1rem; }
+.project-location { display: flex; align-items: center; gap: .35rem; margin: .45rem 0 0; color: var(--explore-muted); font-size: .74rem; }
+.project-location i { color: var(--explore-blue); }
+.project-architect { margin: .85rem 0 0; color: var(--explore-muted); font-size: .72rem; }
+.project-architect strong { display: block; margin-top: .15rem; color: var(--explore-ink); font-size: .8rem; }
+.project-footer { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-top: 1rem; padding-top: .8rem; border-top: 1px solid var(--explore-line); }
+.project-kind { color: var(--explore-blue); font-size: .69rem; font-weight: 700; }
+.view-button { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; min-height: 2.35rem; padding: .4rem .75rem; border-radius: .45rem; background: var(--explore-ink); color: #fff; font-size: .72rem; font-weight: 700; text-decoration: none; }
+.view-button:hover, .view-button:focus-visible { background: var(--explore-blue); outline: none; }
+.bottom-nav { position: fixed; right: 0; bottom: 0; left: 0; z-index: 900; display: flex; justify-content: center; min-height: 4.8rem; padding: .55rem max(1rem, calc((100vw - 34rem) / 2 + 1rem)); border-top: 1px solid var(--explore-line); background: rgba(255,255,255,.96); backdrop-filter: blur(12px); }
+.bottom-nav-link { display: flex; min-width: 4rem; flex: 1; max-width: 6rem; flex-direction: column; align-items: center; justify-content: center; gap: .25rem; border: 0; background: transparent; color: #9a9da3; font-size: .65rem; text-decoration: none; }
+.bottom-nav-link i { font-size: 1.05rem; }
+.bottom-nav-link.is-active { color: var(--explore-blue); }
+.bottom-nav-publish { align-self: center; min-width: 2.9rem; max-width: 2.9rem; height: 2.9rem; margin: 0 .6rem; border-radius: .85rem; background: var(--explore-ink); color: #fff; font-size: 1rem; }
+.bottom-nav-publish:hover { background: var(--explore-blue); }
+@media (min-width: 700px) { .bottom-nav { left: 50%; right: auto; width: 34rem; transform: translateX(-50%); padding-right: 1rem; padding-left: 1rem; } }
+@media (min-width: 900px) { .explore-projects-main { padding-top: 3rem; } .explore-intro { max-width: 44rem; } .projects-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; } .project-card-body { padding: 1.15rem; } }
+@media (prefers-reduced-motion: reduce) { .project-image { transition: none; } }
